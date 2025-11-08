@@ -29,10 +29,10 @@ public class Usuario implements UserDetails {
     private String senha;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-    private List<Endereco> endereco;
+    private List<Endereco> enderecos;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-    private List<Telefone> telefone;
+    private List<Telefone> telefones;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
